@@ -1,0 +1,4 @@
+/home/djadja/Documents/Big Data Frameworks/lab2_java/hadoop-examples-mapreduce/src/main/java/com/opstty/AppDriver.java
+/home/djadja/Documents/Big Data Frameworks/lab2_java/hadoop-examples-mapreduce/src/main/java/com/opstty/mapper/TokenizerMapper.java
+/home/djadja/Documents/Big Data Frameworks/lab2_java/hadoop-examples-mapreduce/src/main/java/com/opstty/job/WordCount.java
+/home/djadja/Documents/Big Data Frameworks/lab2_java/hadoop-examples-mapreduce/src/main/java/com/opstty/reducer/IntSumReducer.java

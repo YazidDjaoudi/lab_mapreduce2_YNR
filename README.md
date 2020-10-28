@@ -1,1 +1,1 @@
-# lab_mapreduce2_YNR
+# hadoop-examples-mapreduce
