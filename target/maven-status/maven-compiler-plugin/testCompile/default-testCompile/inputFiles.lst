@@ -1,2 +1,4 @@
-/home/djadja/Documents/Big Data Frameworks/lab2_java/hadoop-examples-mapreduce/src/test/java/com/opstty/reducer/IntSumReducerTest.java
-/home/djadja/Documents/Big Data Frameworks/lab2_java/hadoop-examples-mapreduce/src/test/java/com/opstty/mapper/TokenizerMapperTest.java
+D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\district\mapper\TokenizerMapperTest.java
+D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\com\opstty\mapper\TokenizerMapperTest.java
+D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\com\opstty\reducer\IntSumReducerTest.java
+D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\district\reducer\IntSumReducerTest.java

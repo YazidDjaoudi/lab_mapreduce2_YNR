@@ -1,2 +1,2 @@
-com/opstty/mapper/TokenizerMapperTest.class
-com/opstty/reducer/IntSumReducerTest.class
+com\opstty\mapper\TokenizerMapperTest.class
+com\opstty\reducer\IntSumReducerTest.class
