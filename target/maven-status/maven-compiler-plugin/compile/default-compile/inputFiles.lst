@@ -3,12 +3,15 @@ D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\species\mapper\Tokeni
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\treesSpecies\mapper\TokenizerMapper.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\maxHeight\mapper\TokenizerMapper.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\maxHeight\reducer\IntReducer.java
+D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\sortTrees\mapper\TokenizerMapper.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\com\opstty\reducer\IntSumReducer.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\com\opstty\job\WordCount.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\treesSpecies\job\TreesSpecies.java
+D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\sortTrees\reducer\IntReducer.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\com\opstty\AppDriver.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\district\job\DistrictCount.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\district\mapper\TokenizerMapper.java
+D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\sortTrees\job\SortTrees.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\species\reducer\IntReducer.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\com\opstty\mapper\TokenizerMapper.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\main\java\maxHeight\job\MaxHeight.java

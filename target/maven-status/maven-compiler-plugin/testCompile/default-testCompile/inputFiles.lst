@@ -2,6 +2,8 @@ D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\species\mapper\Tokeni
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\treesSpecies\reducer\IntReducerTest.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\district\mapper\TokenizerMapperTest.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\maxHeight\mapper\TokenizerMapperTest.java
+D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\sortTrees\reducer\IntReducerTest.java
+D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\sortTrees\mapper\TokenizerMapperTest.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\treesSpecies\mapper\TokenizerMapperTest.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\com\opstty\mapper\TokenizerMapperTest.java
 D:\Projet Java Map Reduce\lab_mapreduce2_YNR\src\test\java\species\reducer\IntReducerTest.java
