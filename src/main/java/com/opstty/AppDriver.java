@@ -4,6 +4,7 @@ import com.opstty.job.WordCount;
 import district.job.DistrictCount;
 import maxHeight.job.MaxHeight;
 import org.apache.hadoop.util.ProgramDriver;
+import sortTrees.job.SortTrees;
 import species.job.ExistingSpecies;
 import treesSpecies.job.TreesSpecies;
 
@@ -23,6 +24,8 @@ public class AppDriver {
                     "A map/reduce program that display all the number of trees by species in the input files.");
             programDriver.addClass("maxheight", MaxHeight.class,
                     "A map/reduce program that display the maximum height of trees by species in the input files.");
+            programDriver.addClass("sorttrees", SortTrees.class,
+                    "A map/reduce program that sort the trees height from smallest to largest in the input files.");
 
             exitCode = programDriver.run(argv);
         } catch (Throwable throwable) {
