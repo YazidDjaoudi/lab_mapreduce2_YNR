@@ -81,7 +81,7 @@ Question 1.8.1 :
                     Bytes Read=16778
             File Output Format Counters
                     Bytes Written=78
-Result : 
+ 
     [abenaissa@hadoop-edge01 ~]$ hdfs dfs -cat districtcount/part-r-00000
     11      1
     12      1
@@ -100,7 +100,7 @@ Result :
     7       1
     8       1
     9       1
-
+    
                 
 Question 1.8.2 :
 `yarn jar /home/abenaissa/hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar \existingspecies /user/abenaissa/trees.csv /user/abenaissa/existingspecies`
@@ -183,9 +183,8 @@ Question 1.8.2 :
                     Bytes Read=16778
             File Output Format Counters
                     Bytes Written=541
-                
-Result : 
-
+                    
+    [abenaissa@hadoop-edge01 ~]$ hdfs dfs -cat existingspecies/part-r-00000
     araucana        1
     atlantica       1
     australis       1
@@ -313,7 +312,6 @@ Question 1.8.3 :
                     Bytes Read=16778
             File Output Format Counters
                     Bytes Written=542
-Result : 
     [abenaissa@hadoop-edge01 ~]$ hdfs dfs -cat /user/abenaissa/treesspecies/part-r-00000
     araucana        1
     atlantica       2
@@ -443,53 +441,53 @@ Question 1.8.4 :
                     Bytes Read=16778
             File Output Format Counters
                     Bytes Written=675
-Result : 
-    [abenaissa@hadoop-edge01 ~]$ hdfs dfs -cat /user/abenaissa/maxheight/part-r-00000
-    araucana        9.0
-    atlantica       25.0
-    australis       16.0
-    baccata 13.0
-    bignonioides    15.0
-    biloba  33.0
-    bungeana        10.0
-    cappadocicum    16.0
-    carpinifolia    30.0
-    colurna 20.0
-    coulteri        14.0
-    decurrens       20.0
-    dioicus 10.0
-    distichum       35.0
-    excelsior       30.0
-    fraxinifolia    27.0
-    giganteum       35.0
-    giraldii        35.0
-    glutinosa       16.0
-    grandiflora     12.0
-    hippocastanum   30.0
-    ilex    15.0
-    involucrata     12.0
-    japonicum       10.0
-    kaki    14.0
-    libanii 30.0
-    monspessulanum  12.0
-    nigra   30.0
-    nigra laricio   30.0
-    opalus  15.0
-    orientalis      34.0
-    papyrifera      12.0
-    petraea 31.0
-    pomifera        13.0
-    pseudoacacia    11.0
-    sempervirens    30.0
-    serrata 18.0
-    stenoptera      30.0
-    suber   10.0
-    sylvatica       30.0
-    tomentosa       20.0
-    tulipifera      35.0
-    ulmoides        12.0
-    virginiana      14.0
-    x acerifolia    45.0
+
+        [abenaissa@hadoop-edge01 ~]$ hdfs dfs -cat /user/abenaissa/maxheight/part-r-00000
+        araucana        9.0
+        atlantica       25.0
+        australis       16.0
+        baccata 13.0
+        bignonioides    15.0
+        biloba  33.0
+        bungeana        10.0
+        cappadocicum    16.0
+        carpinifolia    30.0
+        colurna 20.0
+        coulteri        14.0
+        decurrens       20.0
+        dioicus 10.0
+        distichum       35.0
+        excelsior       30.0
+        fraxinifolia    27.0
+        giganteum       35.0
+        giraldii        35.0
+        glutinosa       16.0
+        grandiflora     12.0
+        hippocastanum   30.0
+        ilex    15.0
+        involucrata     12.0
+        japonicum       10.0
+        kaki    14.0
+        libanii 30.0
+        monspessulanum  12.0
+        nigra   30.0
+        nigra laricio   30.0
+        opalus  15.0
+        orientalis      34.0
+        papyrifera      12.0
+        petraea 31.0
+        pomifera        13.0
+        pseudoacacia    11.0
+        sempervirens    30.0
+        serrata 18.0
+        stenoptera      30.0
+        suber   10.0
+        sylvatica       30.0
+        tomentosa       20.0
+        tulipifera      35.0
+        ulmoides        12.0
+        virginiana      14.0
+        x acerifolia    45.0
     
 
 Question 1.8.5 :
@@ -574,105 +572,103 @@ Question 1.8.5 :
             File Output Format Counters
                     Bytes Written=1461
 
-Result :
-
-    [abenaissa@hadoop-edge01 ~]$ hdfs dfs -cat /user/abenaissa/sorttrees/part-r-00000
-    2.0     sylvatica
-    5.0     baccata
-    6.0     atlantica
-    9.0     araucana
-    10.0    japonicum
-    10.0    suber
-    10.0    bungeana
-    10.0    dioicus
-    10.0    sylvatica
-    11.0    pseudoacacia
-    12.0    virginiana
-    12.0    grandiflora
-    12.0    carpinifolia
-    12.0    ulmoides
-    12.0    monspessulanum
-    12.0    kaki
-    12.0    papyrifera
-    12.0    involucrata
-    13.0    baccata
-    13.0    pomifera
-    14.0    kaki
-    14.0    coulteri
-    14.0    virginiana
-    15.0    opalus
-    15.0    bignonioides
-    15.0    sylvatica
-    15.0    carpinifolia
-    15.0    ilex
-    16.0    glutinosa
-    16.0    cappadocicum
-    16.0    carpinifolia
-    16.0    australis
-    18.0    biloba
-    18.0    serrata
-    18.0    hippocastanum
-    18.0    sylvatica
-    20.0    colurna
-    20.0    x acerifolia
-    20.0    tomentosa
-    20.0    colurna
-    20.0    decurrens
-    20.0    colurna
-    20.0    orientalis
-    20.0    sylvatica
-    20.0    tomentosa
-    20.0    giganteum
-    20.0    distichum
-    20.0    orientalis
-    22.0    biloba
-    22.0    hippocastanum
-    22.0    orientalis
-    22.0    fraxinifolia
-    22.0    tulipifera
-    23.0    sylvatica
-    25.0    atlantica
-    25.0    biloba
-    25.0    x acerifolia
-    25.0    orientalis
-    25.0    nigra
-    25.0    biloba
-    26.0    orientalis
-    27.0    fraxinifolia
-    27.0    orientalis
-    28.0    nigra
-    30.0    nigra laricio
-    30.0    petraea
-    30.0    giganteum
-    30.0    stenoptera
-    30.0    carpinifolia
-    30.0    sempervirens
-    30.0    sylvatica
-    30.0    x acerifolia
-    30.0    distichum
-    30.0    x acerifolia
-    30.0    nigra
-    30.0    sylvatica
-    30.0    giganteum
-    30.0    excelsior
-    30.0    libanii
-    30.0    libanii
-    30.0    hippocastanum
-    31.0    petraea
-    31.0    orientalis
-    32.0    x acerifolia
-    33.0    biloba
-    34.0    orientalis
-    35.0    distichum
-    35.0    tulipifera
-    35.0    x acerifolia
-    35.0    giraldii
-    35.0    giganteum
-    40.0    x acerifolia
-    40.0    x acerifolia
-    40.0    x acerifolia
-    42.0    x acerifolia
-    45.0    x acerifolia
+        [abenaissa@hadoop-edge01 ~]$ hdfs dfs -cat /user/abenaissa/sorttrees/part-r-00000
+        2.0     sylvatica
+        5.0     baccata
+        6.0     atlantica
+        9.0     araucana
+        10.0    japonicum
+        10.0    suber
+        10.0    bungeana
+        10.0    dioicus
+        10.0    sylvatica
+        11.0    pseudoacacia
+        12.0    virginiana
+        12.0    grandiflora
+        12.0    carpinifolia
+        12.0    ulmoides
+        12.0    monspessulanum
+        12.0    kaki
+        12.0    papyrifera
+        12.0    involucrata
+        13.0    baccata
+        13.0    pomifera
+        14.0    kaki
+        14.0    coulteri
+        14.0    virginiana
+        15.0    opalus
+        15.0    bignonioides
+        15.0    sylvatica
+        15.0    carpinifolia
+        15.0    ilex
+        16.0    glutinosa
+        16.0    cappadocicum
+        16.0    carpinifolia
+        16.0    australis
+        18.0    biloba
+        18.0    serrata
+        18.0    hippocastanum
+        18.0    sylvatica
+        20.0    colurna
+        20.0    x acerifolia
+        20.0    tomentosa
+        20.0    colurna
+        20.0    decurrens
+        20.0    colurna
+        20.0    orientalis
+        20.0    sylvatica
+        20.0    tomentosa
+        20.0    giganteum
+        20.0    distichum
+        20.0    orientalis
+        22.0    biloba
+        22.0    hippocastanum
+        22.0    orientalis
+        22.0    fraxinifolia
+        22.0    tulipifera
+        23.0    sylvatica
+        25.0    atlantica
+        25.0    biloba
+        25.0    x acerifolia
+        25.0    orientalis
+        25.0    nigra
+        25.0    biloba
+        26.0    orientalis
+        27.0    fraxinifolia
+        27.0    orientalis
+        28.0    nigra
+        30.0    nigra laricio
+        30.0    petraea
+        30.0    giganteum
+        30.0    stenoptera
+        30.0    carpinifolia
+        30.0    sempervirens
+        30.0    sylvatica
+        30.0    x acerifolia
+        30.0    distichum
+        30.0    x acerifolia
+        30.0    nigra
+        30.0    sylvatica
+        30.0    giganteum
+        30.0    excelsior
+        30.0    libanii
+        30.0    libanii
+        30.0    hippocastanum
+        31.0    petraea
+        31.0    orientalis
+        32.0    x acerifolia
+        33.0    biloba
+        34.0    orientalis
+        35.0    distichum
+        35.0    tulipifera
+        35.0    x acerifolia
+        35.0    giraldii
+        35.0    giganteum
+        40.0    x acerifolia
+        40.0    x acerifolia
+        40.0    x acerifolia
+        42.0    x acerifolia
+        45.0    x acerifolia
 
 Question 1.8.6 :
 `yarn jar /home/abenaissa/hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar \oldesttrees /user/abenaissa/trees.csv /user/abenaissa/oldesttrees`
@@ -756,7 +752,6 @@ Question 1.8.6 :
             File Output Format Counters
                     Bytes Written=18
 
-Result : 
 
     [abenaissa@hadoop-edge01 ~]$ hdfs dfs -cat oldesttrees/part-r-00000    
     
