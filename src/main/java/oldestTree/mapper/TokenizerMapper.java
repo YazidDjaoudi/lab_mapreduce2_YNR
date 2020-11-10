@@ -9,25 +9,23 @@ import java.util.StringTokenizer;
 
 
 public class TokenizerMapper extends Mapper<Object, Text, Text, MapWritable> {
-    private Text district = new Text();
-    MapWritable newpair = new MapWritable();
+    private Text text_line = new Text();
+    MapWritable newpair = new MapWritable(); //Mapper for values like : <key, <key,values>>
     @Override
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
 
-        StringTokenizer itr = new StringTokenizer(value.toString(), "\n");
+        StringTokenizer itr = new StringTokenizer(value.toString(), "\n"); //Split by line
 
         while (itr.hasMoreTokens()) {
-            district.set(itr.nextToken());
-            Text districtnumber_t = new Text(district.toString().split(";")[1]);
+            text_line.set(itr.nextToken());
+            Text districtnumber = new Text(text_line.toString().split(";")[1]); //Keep the number of the district
 
-            if (!districtnumber_t.equals(new Text("ARRONDISSEMENT"))) {
-                if((!district.toString().split(";")[6].equals("")) && (!district.toString().split(";")[5].equals(""))){
-
-                    //IntWritable districtnumber = new IntWritable(Integer.parseInt(district.toString().split(";")[1]));
+            if (!districtnumber.equals(new Text("ARRONDISSEMENT"))) { //Skip the first line
+                if((!text_line.toString().split(";")[6].equals("")) && (!text_line.toString().split(";")[5].equals(""))){ //Avoid empty value
                     newpair.clear();
-                    newpair.put(new IntWritable(Integer.parseInt(district.toString().split(";")[1])),new IntWritable(Integer.parseInt(district.toString().split(";")[5])));
+                    newpair.put(new IntWritable(Integer.parseInt(text_line.toString().split(";")[1])),new IntWritable(Integer.parseInt(text_line.toString().split(";")[5]))); //Put in the mapper the number of the district and the year of the trees
 
-                    System.out.println(new Text("District")+ " " + newpair ); //Test d'affichage
+                    System.out.println(new Text("District")+ " " + newpair ); //Display test
                     context.write(new Text("District"), newpair);
 
                 }

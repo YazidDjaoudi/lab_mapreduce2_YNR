@@ -12,7 +12,7 @@ public class IntReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
     public void reduce(Text key, Iterable<IntWritable> values, Context context)
             throws IOException, InterruptedException {
             int sum = 0;
-            for (IntWritable val : values) {
+            for (IntWritable val : values) { //Get the sum of all value for one key
                 sum += val.get();
             }
             result.set(sum);

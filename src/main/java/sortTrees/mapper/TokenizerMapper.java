@@ -8,22 +8,22 @@ import java.util.StringTokenizer;
 
 
 public class TokenizerMapper extends Mapper<Object, Text, FloatWritable, Text> {
-    private Text district = new Text();
+    private Text text_line = new Text();
 
     @Override
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
 
-        StringTokenizer itr = new StringTokenizer(value.toString(), "\n");
+        StringTokenizer itr = new StringTokenizer(value.toString(), "\n"); //Split by line
 
         while (itr.hasMoreTokens()) {
-            district.set(itr.nextToken());
-            Text districtNumber = new Text(district.toString().split(";")[3]);
+            text_line.set(itr.nextToken());
+            Text species = new Text(text_line.toString().split(";")[3]); //Keep the value of the third column
 
-            if (!districtNumber.equals(new Text("ESPECE"))) {
-                if(!district.toString().split(";")[6].equals("")){
-                    FloatWritable height = new FloatWritable((float)Double.parseDouble(district.toString().split(";")[6]));
-                    context.write(height, districtNumber);
-                    System.out.println(height+ " " + districtNumber); //Test d'affichage
+            if (!species.equals(new Text("ESPECE"))) { //Skip the first line
+                if(!text_line.toString().split(";")[6].equals("")){ //Avoid empty value
+                    FloatWritable height = new FloatWritable((float)Double.parseDouble(text_line.toString().split(";")[6])); //Keep the value of the sixth column
+                    context.write(height, species);
+                    System.out.println(height+ " " + species); //Display test
                 }
 
             }

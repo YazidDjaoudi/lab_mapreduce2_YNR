@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.opstty.mapper.TokenizerMapperTest
+Test set: oldestTree.mapper.TokenizerMapperTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.236 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec

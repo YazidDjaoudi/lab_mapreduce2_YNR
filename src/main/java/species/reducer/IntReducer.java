@@ -11,6 +11,6 @@ public class IntReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
     public void reduce(Text key, Iterable<IntWritable> values, Context context)
             throws IOException, InterruptedException {
-        context.write(key, new IntWritable(1));
+        context.write(key, new IntWritable(1)); //Write value for each key (value doesn't matter here because the most important is the key)
     }
 }

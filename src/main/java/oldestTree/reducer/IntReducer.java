@@ -11,17 +11,17 @@ public class IntReducer extends Reducer<Text, MapWritable, Text, MapWritable> {
 
     public void reduce(Text key, Iterable<MapWritable> values, Context context)
             throws IOException, InterruptedException {
-        MapWritable max_value = new MapWritable(values.iterator().next());
+        MapWritable min_value = new MapWritable(values.iterator().next()); //Keep the first value to compare to the next one
 
         for (MapWritable val : values) {
 
-            if(Integer.parseInt(((max_value.values().toArray())[0]).toString()) >= Integer.parseInt(((val.values().toArray())[0]).toString())){
-                max_value = val;
+            if(Integer.parseInt(((min_value.values().toArray())[0]).toString()) >= Integer.parseInt(((val.values().toArray())[0]).toString())){//If the year is lower min_value is updated with the new one
+                min_value = val;
             }
 
         }
-        System.out.println(key + " " + max_value);
+        System.out.println(key + " " + min_value);
 
-        context.write(key, max_value);
+        context.write(key, min_value);
     }
 }

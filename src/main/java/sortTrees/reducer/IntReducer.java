@@ -12,7 +12,7 @@ public class IntReducer extends Reducer<FloatWritable,Text, Text, FloatWritable>
     public void reduce(Text key, Iterable<FloatWritable> values, Context context)
             throws IOException, InterruptedException {
         for (FloatWritable val : values) {
-            context.write(key, new FloatWritable(val.get()));
+            context.write(key, new FloatWritable(val.get())); //Write all of the value
             System.out.println(key.toString()+ " "+ val);
         }
     }

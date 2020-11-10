@@ -12,7 +12,7 @@ public class IntReducer extends Reducer<Text, FloatWritable, Text, FloatWritable
 
     public void reduce(Text key, Iterable<FloatWritable> values, Context context)
             throws IOException, InterruptedException {
-        FloatWritable max_value = new FloatWritable(values.iterator().next().get());
+        FloatWritable max_value = new FloatWritable(values.iterator().next().get()); //Taking the first value to compare with the next one
 
         for(FloatWritable value : values){
             if(value.get() > max_value.get()){

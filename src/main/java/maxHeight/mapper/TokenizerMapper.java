@@ -1,7 +1,6 @@
 package maxHeight.mapper;
 
 import org.apache.hadoop.io.FloatWritable;
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
@@ -10,22 +9,22 @@ import java.util.StringTokenizer;
 
 
 public class TokenizerMapper extends Mapper<Object, Text, Text, FloatWritable> {
-    private Text district = new Text();
+    private Text text_line = new Text();
 
     @Override
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
 
-        StringTokenizer itr = new StringTokenizer(value.toString(), "\n");
+        StringTokenizer itr = new StringTokenizer(value.toString(), "\n"); //Split by line
 
         while (itr.hasMoreTokens()) {
-            district.set(itr.nextToken());
-            Text districtNumber = new Text(district.toString().split(";")[3]);
+            text_line.set(itr.nextToken());
+            Text species = new Text(text_line.toString().split(";")[3]); //Keep the value of third column
 
-            if (!districtNumber.equals(new Text("ESPECE"))) {
-                if(!district.toString().split(";")[6].equals("")){
-                    FloatWritable height = new FloatWritable((float)Double.parseDouble(district.toString().split(";")[6]));
-                    context.write(districtNumber, height);
-                    System.out.println(districtNumber + " "+height); //Test d'affichage
+            if (!species.equals(new Text("ESPECE"))) { // skip the first line
+                if(!text_line.toString().split(";")[6].equals("")){ // avoid empty value
+                    FloatWritable height = new FloatWritable((float)Double.parseDouble(text_line.toString().split(";")[6])); //Keep value of the sixth column
+                    context.write(species, height);
+                    System.out.println(species + " "+height); //Display test
                 }
 
             }

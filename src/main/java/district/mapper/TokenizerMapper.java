@@ -19,10 +19,10 @@ public void map(Object key, Text value, Context context) throws IOException, Int
 
     while (itr.hasMoreTokens()) {
             district.set(itr.nextToken());
-            Text districtNumber = new Text(district.toString().split(";")[1]);
-            if(!districtNumber.equals(new Text("ARRONDISSEMENT"))){
+            Text districtNumber = new Text(district.toString().split(";")[1]); //Keep the value of second column
+            if(!districtNumber.equals(new Text("ARRONDISSEMENT"))){ //Skip the first line
                 context.write(districtNumber, new IntWritable(0));
-                System.out.println(district.toString().split(";")[1]); //Test d'affichage
+                System.out.println(district.toString().split(";")[1]); //Display test
             }
 
     }

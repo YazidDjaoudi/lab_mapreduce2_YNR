@@ -10,19 +10,19 @@ import java.util.StringTokenizer;
 
 
 public class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
-    private Text district = new Text();
+    private Text text_line = new Text();
 
     @Override
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
 
-        StringTokenizer itr = new StringTokenizer(value.toString(), "\n");
+        StringTokenizer itr = new StringTokenizer(value.toString(), "\n"); //Split by line
 
         while (itr.hasMoreTokens()) {
-            district.set(itr.nextToken());
-            Text districtNumber = new Text(district.toString().split(";")[3]);
-            if(!districtNumber.equals(new Text("ESPECE"))){
-                context.write(districtNumber, new IntWritable(0));
-                System.out.println(district.toString().split(";")[3]); //Test d'affichage
+            text_line.set(itr.nextToken());
+            Text species = new Text(text_line.toString().split(";")[3]); //Keep the value of the third column
+            if(!species.equals(new Text("ESPECE"))){ //Skip the first line
+                context.write(species, new IntWritable(0));
+                System.out.println(text_line.toString().split(";")[3]); //Display test
             }
 
         }
