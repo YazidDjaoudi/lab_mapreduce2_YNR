@@ -1,4 +1,4 @@
-# hadoop-examples-mapreduce
+# DJOUADI Yazid HADDAR Nassim BENAISSA Aymen
 
 Question 1.8.1 :
 `yarn jar /home/abenaissa/hadoop-examples-mapreduce-1.0-SNAPSHOT-jar-with-dependencies.jar \districtcount /user/abenaissa/trees.csv /user/abenaissa/districtcount`
